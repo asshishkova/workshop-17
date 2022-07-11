@@ -14,11 +14,11 @@ export class Caretaker {
         this._salary = 0;
     }
 
-    public feed(animal: Animal): void {
+    public pet(animal: Animal): void {
         console.log(`${this._name} pets ${animal.name}`);
     }
 
-    public pet(animal: Animal): void {
+    public feed(animal: Animal): void {
       let hasFood = foodStorage.getPortion(this.getFavoriteFood(animal));
       if (hasFood) {
           console.log(`${animal.name} was given food`);
