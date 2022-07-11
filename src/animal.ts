@@ -1,5 +1,5 @@
 export enum AnimalType {
-    DOG, CAT, SHARK, TIGER
+    DOG, CAT, SHARK, TIGER, RABBIT
 }
 
 export class Animal {

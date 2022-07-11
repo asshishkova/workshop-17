@@ -17,7 +17,8 @@ function init() {
         new Animal(AnimalType.SHARK, 'Jaws'),
         new Animal(AnimalType.DOG, 'Snoopy'),
         new Animal(AnimalType.CAT, 'Garfield'),
-        new Animal(AnimalType.DOG, 'Toto')
+        new Animal(AnimalType.DOG, 'Toto'),
+        new Animal(AnimalType.RABBIT, 'Rab')
     ]
 
 
@@ -25,6 +26,7 @@ function init() {
     foodStorage.addPortions('fish', 3);
     foodStorage.addPortions('bonzo', 1);
     foodStorage.addPortions('meat', 5);
+    foodStorage.addPortions('carrot', 7);
 
     zoo = new Zoo(animals, caretakers);
 }

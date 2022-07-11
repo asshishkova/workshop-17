@@ -39,6 +39,8 @@ export class Caretaker {
                 return 'fish';
             case AnimalType.TIGER:
                 return 'meat';
+            case AnimalType.RABBIT:
+                return 'carrot';
         }
     }
 }
