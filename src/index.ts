@@ -26,7 +26,7 @@ function init() {
     foodStorage.addPortions('fish', 3);
     foodStorage.addPortions('bonzo', 1);
     foodStorage.addPortions('meat', 5);
-    foodStorage.addPortions('carrot', 7);
+    foodStorage.addPortions('carrot', 3);
 
     zoo = new Zoo(animals, caretakers);
 }
@@ -40,8 +40,12 @@ const delay = (ms:number) => new Promise(res => setTimeout(res, ms));
 
 async function main() {
     while (!foodStorage.isEmpty()) {
-         zoo.caretakers[getRandomInt(zoo.caretakers.length)].feed(
+        zoo.caretakers[getRandomInt(zoo.caretakers.length)].feed(
             zoo.animals[getRandomInt(zoo.animals.length)]
+        );
+        await delay(100)
+        zoo.caretakers[getRandomInt(zoo.caretakers.length)].pet(
+          zoo.animals[getRandomInt(zoo.animals.length)]
         );
         await delay(100)
     }

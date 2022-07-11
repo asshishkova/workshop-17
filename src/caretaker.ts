@@ -15,15 +15,19 @@ export class Caretaker {
     }
 
     public feed(animal: Animal): void {
-        let hasFood = foodStorage.getPortion(this.getFavoriteFood(animal));
-        if (hasFood) {
-            console.log(`${animal.name} was given food`);
-            this._salary += 500;
-            console.log(`${this._name} was paid $500`);
-        } else {
-            console.log(`${this._name} couldn't feed ${animal.name}`)
-        }
+        console.log(`${this._name} pets ${animal.name}`);
     }
+
+    public pet(animal: Animal): void {
+      let hasFood = foodStorage.getPortion(this.getFavoriteFood(animal));
+      if (hasFood) {
+          console.log(`${animal.name} was given food`);
+          this._salary += 500;
+          console.log(`${this._name} was paid $500`);
+      } else {
+          console.log(`${this._name} couldn't feed ${animal.name}`)
+      }
+  }
 
     get name(): string {
         return this._name;
